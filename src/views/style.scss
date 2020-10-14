@@ -1,0 +1,105 @@
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+//NavBar style
+.nav-items {
+  width: 140px !important;
+  padding: 0 !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.register_login {
+  cursor: pointer;
+  color: #ba54f5 !important;
+
+  &:hover {
+    color: #e14eca !important;
+  }
+}
+
+.invoice-logo {
+  height: 70px;
+  width: 65%;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+
+.invoice-info {
+  margin: 1rem 0 0 !important;
+}
+
+.d-inline-flex strong {
+  margin-right: 3px;
+}
+
+.date-invoice {
+  margin-top: 25px !important;
+}
+
+input#myNumber {
+  border: none;
+  padding: 5px 12px;
+  margin: 5px 0;
+}
+
+.input-group .input-group-btn {
+  padding: 0 9px;
+}
+
+.justify-content-center.carousel-item img {
+  height: 33rem !important;
+}
+
+.avatar-img {
+  max-width: 200px;
+  border-radius: 5%;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+#tab_invoice {
+  .section {
+    padding: 0 !important;
+
+    .row {
+      .ml-auto.mr-auto.col-md-10 {
+        margin: 0 !important;
+      }
+
+      .card-invoice.card {
+        width: 125%;
+        margin: 0 !important;
+      }
+    }
+  }
+
+}
+
+#tab-change_pass {
+  .container {
+    padding: 0 !important;
+
+    .mx-auto.col-md-8.col-lg-5 {
+      margin: 0 !important;
+
+      .card-login.card {
+        width: 680px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.chat-page .card {
+  max-height: fit-content !important;
+  overflow: hidden !important;
+}
