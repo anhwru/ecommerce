@@ -1,6 +1,6 @@
-body {
-  font-family: 'Inter', sans-serif !important;
-}
+//body {
+//  font-family: 'Inter', sans-serif !important;
+//}
 
 //NavBar style
 .nav-items {
@@ -102,4 +102,37 @@ input#myNumber {
 .chat-page .card {
   max-height: fit-content !important;
   overflow: hidden !important;
+}
+
+#star-default-color {
+  span.MuiRating-icon.MuiRating-iconEmpty {
+    color: #afafaf;
+  }
+}
+
+.number-reviewer {
+  margin: 3px 10px !important;
+}
+
+.my-pagination {
+  .justify-content-center {
+    display: flex !important;
+    margin: auto !important;
+  }
+
+}
+#product-category{
+  margin-top:60px ;
+}
+#collapse{
+  background: #1f2251;
+  width: 100% !important;
+  .card-plains{
+    width: 100% !important;
+      .card-header{
+        a{
+          padding: 10px 0 !important;
+        }
+    }
+  }
 }

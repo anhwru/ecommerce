@@ -37,7 +37,7 @@ class ColorNavbar extends React.Component {
         modalClassic: false,
         modalNotice: false,
         modalLogin: false,
-        modalRegister : false,
+        modalRegister: false,
         openedCollapses: ["collapseOne"]
     };
     toggleModalLogin = () => {
@@ -51,7 +51,7 @@ class ColorNavbar extends React.Component {
             modalLogin: false
         });
     };
-  
+    
     
     componentDidMount() {
         window.addEventListener("scroll", this.changeNavbarColor);
@@ -116,10 +116,12 @@ class ColorNavbar extends React.Component {
                             </div>
                             <Nav className="ml-auto" navbar>
                                 <NavItem className="nav-items">
-                                    <NavLink>
-                                        <i className="tim-icons icon-world"/>
-                                        Discover
-                                    </NavLink>
+                                    <Link to='/home'>
+                                        <NavLink>
+                                            <i className="tim-icons icon-planet"/>
+                                            Trang chủ
+                                        </NavLink>
+                                    </Link>
                                 </NavItem>
                                 {/*<NavItem className="nav-items">*/}
                                 {/*    <Link to="/invoice/:id">*/}
@@ -138,10 +140,10 @@ class ColorNavbar extends React.Component {
                                     </Link>
                                 </NavItem>
                                 <NavItem className="nav-items" onClick={this.toggleModalLogin}>
-                                        <NavLink>
-                                            <i className="tim-icons icon-single-02"/>
-                                            Đăng nhập
-                                        </NavLink>
+                                    <NavLink>
+                                        <i className="tim-icons icon-single-02"/>
+                                        Đăng nhập
+                                    </NavLink>
                                     <Modal
                                         isOpen={this.state.modalLogin}
                                         toggle={this.toggleModalLogin}
@@ -163,7 +165,7 @@ class ColorNavbar extends React.Component {
                                                         type="button"
                                                         onClick={this.toggleModalLogin}
                                                     >
-                                                        <i className="tim-icons icon-simple-remove" />
+                                                        <i className="tim-icons icon-simple-remove"/>
                                                     </button>
                                                 </CardHeader>
                                                 <CardBody>
@@ -174,14 +176,14 @@ class ColorNavbar extends React.Component {
                                                     >
                                                         <InputGroupAddon addonType="prepend">
                                                             <InputGroupText>
-                                                                <i className="tim-icons icon-single-02" />
+                                                                <i className="tim-icons icon-single-02"/>
                                                             </InputGroupText>
                                                         </InputGroupAddon>
                                                         <Input
                                                             placeholder="Tài Khoản"
                                                             type="text"
-                                                            onFocus={e => this.setState({ firstNameFocus: true })}
-                                                            onBlur={e => this.setState({ firstNameFocus: false })}
+                                                            onFocus={e => this.setState({firstNameFocus: true})}
+                                                            onBlur={e => this.setState({firstNameFocus: false})}
                                                         />
                                                     </InputGroup>
                                                     <InputGroup
@@ -191,14 +193,14 @@ class ColorNavbar extends React.Component {
                                                     >
                                                         <InputGroupAddon addonType="prepend">
                                                             <InputGroupText>
-                                                                <i className="tim-icons icon-key-25" />
+                                                                <i className="tim-icons icon-key-25"/>
                                                             </InputGroupText>
                                                         </InputGroupAddon>
                                                         <Input
                                                             placeholder="Mật khẩu"
                                                             type="password"
-                                                            onFocus={e => this.setState({ lastNameFocus: true })}
-                                                            onBlur={e => this.setState({ lastNameFocus: false })}
+                                                            onFocus={e => this.setState({lastNameFocus: true})}
+                                                            onBlur={e => this.setState({lastNameFocus: false})}
                                                         />
                                                     </InputGroup>
                                                 </CardBody>
@@ -265,15 +267,15 @@ class ColorNavbar extends React.Component {
                                                 >
                                                     <InputGroupAddon addonType="prepend">
                                                         <InputGroupText>
-                                                            <i className="tim-icons icon-email-85" />
+                                                            <i className="tim-icons icon-email-85"/>
                                                         </InputGroupText>
                                                     </InputGroupAddon>
                                                     <Input
                                                         placeholder="Email"
                                                         autoComplete="off"
                                                         type="text"
-                                                        onFocus={e => this.setState({ emailFocus: true })}
-                                                        onBlur={e => this.setState({ emailFocus: false })}
+                                                        onFocus={e => this.setState({emailFocus: true})}
+                                                        onBlur={e => this.setState({emailFocus: false})}
                                                     />
                                                 </InputGroup>
                                                 <InputGroup
@@ -283,17 +285,17 @@ class ColorNavbar extends React.Component {
                                                 >
                                                     <InputGroupAddon addonType="prepend">
                                                         <InputGroupText>
-                                                            <i className="tim-icons icon-single-02" />
+                                                            <i className="tim-icons icon-single-02"/>
                                                         </InputGroupText>
                                                     </InputGroupAddon>
                                                     <Input
                                                         placeholder="Tên đăng nhập"
                                                         type="text"
                                                         onFocus={e =>
-                                                            this.setState({ fullNamefocus: true })
+                                                            this.setState({fullNamefocus: true})
                                                         }
                                                         onBlur={e =>
-                                                            this.setState({ fullNamefocus: false })
+                                                            this.setState({fullNamefocus: false})
                                                         }
                                                     />
                                                 </InputGroup>
@@ -304,17 +306,17 @@ class ColorNavbar extends React.Component {
                                                 >
                                                     <InputGroupAddon addonType="prepend">
                                                         <InputGroupText>
-                                                            <i className="tim-icons icon-key-25" />
+                                                            <i className="tim-icons icon-key-25"/>
                                                         </InputGroupText>
                                                     </InputGroupAddon>
                                                     <Input
                                                         placeholder="Mật khẩu"
                                                         type="text"
                                                         onFocus={e =>
-                                                            this.setState({ passwordFocus: true })
+                                                            this.setState({passwordFocus: true})
                                                         }
                                                         onBlur={e =>
-                                                            this.setState({ passwordFocus: false })
+                                                            this.setState({passwordFocus: false})
                                                         }
                                                     />
                                                 </InputGroup>
@@ -325,25 +327,25 @@ class ColorNavbar extends React.Component {
                                                 >
                                                     <InputGroupAddon addonType="prepend">
                                                         <InputGroupText>
-                                                            <i className="tim-icons icon-key-25" />
+                                                            <i className="tim-icons icon-key-25"/>
                                                         </InputGroupText>
                                                     </InputGroupAddon>
                                                     <Input
                                                         placeholder="Nhập lại mật khẩu"
                                                         type="text"
                                                         onFocus={e =>
-                                                            this.setState({ passwordFocus2: true })
+                                                            this.setState({passwordFocus2: true})
                                                         }
                                                         onBlur={e =>
-                                                            this.setState({ passwordFocus2: false })
+                                                            this.setState({passwordFocus2: false})
                                                         }
                                                     />
                                                 </InputGroup>
                                                 <FormGroup check className="text-left">
                                                     <Label>
                                                         <Input type="checkbox"/>
-                                                        <span className="form-check-sign" />Tôi đồng ý với {" "}
-                                                        <a href="" >
+                                                        <span className="form-check-sign"/>Tôi đồng ý với {" "}
+                                                        <a href="">
                                                             điều khoản và chính sách
                                                         </a>
                                                         .

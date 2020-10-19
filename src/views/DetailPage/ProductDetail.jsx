@@ -38,8 +38,19 @@ import {
 } from "reactstrap";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
-import DemoFooter from "components/Footers/DemoFooter.jsx";
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Rating from '@material-ui/lab/Rating';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
+import StarRatingReadOnly from "./StarRatingReadOnly";
+import CustomerRating from "./CustomerRating";
+
 
 const items = [
     {
@@ -47,7 +58,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src={require("assets/img/shirt.png")}
+                src="https://product.hstatic.net/1000371037/product/img_8745_27556ea9a69940f8b62e0805cb0510d7.jpg"
             />
         ),
         altText: "",
@@ -59,7 +70,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src={require("assets/img/shorts.png")}
+                src="https://decalbinhduong.com/kcfinder/upload//images/%C4%91%E1%BB%93%20ch%C6%A1i%20xe/nh%E1%BB%9Bt/Nh%E1%BB%9Bt%20Motul%207100%204T%2010W50%201L13.jpg"
             />
         ),
         altText: "",
@@ -71,7 +82,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src={require("assets/img/tshirt.png")}
+                src="https://cf.shopee.vn/file/0f93a430578c7207383e0e78ac5c735b"
             />
         ),
         altText: "",
@@ -198,19 +209,15 @@ class ProductDetail extends React.Component {
                                     </Carousel>
                                 </Col>
                                 <Col className="mx-auto" lg="6" md="12">
-                                    <h2 className="title">Givenchy</h2>
+                                    <h2 className="title">Nhớt Motul tổng hợp 4T 7100</h2>
                                     <div className="stats stats-right">
-                                        <div className="stars text-warning">
-                                            <i className="fas fa-star" />
-                                            <i className="fas fa-star ml-1" />
-                                            <i className="fas fa-star ml-1" />
-                                            <i className="fas fa-star ml-1" />
-                                            <i className="far fa-star ml-1" />
-                                            <p className="d-inline ml-1">(76 customer reviews)</p>
+                                        <div className="stars text-warning d-inline-flex">
+                                            <StarRatingReadOnly />
+                                            <p className="d-inline ml-1 number-reviewer">(76 khách hàng đánh giá)</p>
                                         </div>
                                     </div>
                                     <br />
-                                    <h2 className="main-price">$3,390</h2>
+                                    <h2 className="main-price">399.000 đ</h2>
                                     <h5 className="category">Mô tả sản phẩm</h5>
                                     <p className="description">
                                         Eres' daring 'Grigri Fortune' swimsuit has the fit and

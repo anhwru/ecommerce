@@ -41,7 +41,7 @@ class DetailPage extends React.Component {
             <>
                 <ColorNavbar/>
                 <div className="wrapper" ref="wrapper">
-                    <div className="main">
+                    <div className="main" style={{'margin':'100px 0px'}}>
                         <ProductDetail/>
                         <SuggestionProduct/>
                     </div>

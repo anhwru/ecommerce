@@ -5,9 +5,7 @@ import {
     Button,
     ButtonGroup,
     Card,
-    CardHeader,
     CardBody,
-    CardTitle,
     Table,
     Container,
     Row,
@@ -52,13 +50,13 @@ class MyCart extends React.Component {
                                                         <div className="img-container">
                                                             <img
                                                                 alt="..."
-                                                                src={require("assets/img/jacket.png")}
+                                                                src="https://salt.tikicdn.com/cache/w390/ts/product/aa/29/c4/a0626c91253c31174a1bfece8fce3427.jpg"
                                                             />
                                                         </div>
                                                     </td>
                                                     <td className="td-name">
                                                         <Link to="product-detail/:id">
-                                                            Suede Biker Jacket
+                                                            Motul 4T 10w40
                                                         </Link>
                                                         <br/>
                                                         <small>by Saint Laurent</small>
@@ -107,7 +105,7 @@ class MyCart extends React.Component {
                                                         <div className="img-container">
                                                             <img
                                                                 alt="..."
-                                                                src={require("assets/img/t-shirt.png")}
+                                                                src="https://product.hstatic.net/1000170043/product/120a44140.png"
                                                             />
                                                         </div>
                                                     </td>
@@ -116,7 +114,7 @@ class MyCart extends React.Component {
                                                             href="#pablo"
                                                             onClick={e => e.preventDefault()}
                                                         >
-                                                            Jersey T-Shirt
+                                                            Heo dầu Brembo chính hãng
                                                         </a>
                                                         <br/>
                                                         <small>by Balmain</small>
@@ -165,7 +163,7 @@ class MyCart extends React.Component {
                                                         <div className="img-container">
                                                             <img
                                                                 alt="..."
-                                                                src={require("assets/img/gucci.png")}
+                                                                src="https://vn-live-01.slatic.net/p/579815bf9ba83085abda47062fb09a5c.jpg"
                                                             />
                                                         </div>
                                                     </td>
@@ -174,7 +172,7 @@ class MyCart extends React.Component {
                                                             href="#pablo"
                                                             onClick={e => e.preventDefault()}
                                                         >
-                                                            Slim-Fit Swim Short
+                                                            Đèn xi nhan Spirit Beast L17
                                                         </a>
                                                         <br/>
                                                         <small>by Prada</small>

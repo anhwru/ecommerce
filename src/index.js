@@ -55,6 +55,8 @@ import DetailPage from "./views/DetailPage/DetailPage";
 import Login from "./views/LoginPagge/Login";
 import InvoicePages from "./views/InvoicePage/InvoicePage";
 import AccountPage from "./views/Account/AccountPage";
+import IndexPage from "./views/IndexPage/IndexPage";
+import ProductCategory from "./views/ProductCategory/ProductCategory";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -105,6 +107,7 @@ ReactDOM.render(
       <Route path="/chat-page" render={props => <ChatPage {...props} />} />
       
       
+      <Route path="/home" render={props => <IndexPage {...props} />} />
       <Route path="/my-cart" render={props => <CartPage {...props} />} />
       <Route path="/checkout" render={props => <Checkout {...props} />} />
       <Route path="/invoice/:id" render={props => <InvoicePages {...props} />} />
@@ -113,6 +116,7 @@ ReactDOM.render(
       <Route path="/404" render={props => <Error404 {...props} />} />
       <Route path="/500" render={props => <Error500 {...props} />} />
       <Route path="/my-account" render={props => <AccountPage {...props} />} />
+      <Route path="/product-category" render={props => <ProductCategory {...props} />} />
       <Redirect from="/" to="/presentation" />
   
       <Redirect from='/*' to='/404' />
