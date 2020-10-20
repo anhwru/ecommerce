@@ -8,6 +8,10 @@ import {
     Container,
     Row,
     Col,
+    Form,
+    FormGroup,
+    Button,
+    Input
 } from "reactstrap";
 import ChooseType from "./ChooseType";
 import RangeSlider from "./SliderRange";
@@ -51,6 +55,40 @@ class Collapses extends React.Component {
                                 <div id="collapse">
                                     <Row>
                                         <Col md="12">
+                                            <Card className="card-plains">
+                                                <CardHeader id="headingOne" role="tab">
+                                                    <a
+                                                        className="d-flex"
+                                                        href="#pablo"
+                                                        data-toggle="collapse"
+                                                        aria-expanded={this.state.openedCollapses.includes(
+                                                            "collapseOne"
+                                                        )}
+                                                        onClick={e => {
+                                                            e.preventDefault();
+                                                            this.collapsesToggle("collapseOne");
+                                                        }}
+                                                    >
+                                                        Tìm theo tên{" "}
+                                                        <i className="tim-icons icon-minimal-down ml-auto" />
+                                                    </a>
+                                                </CardHeader>
+                                                <Collapse
+                                                    role="tabpanel"
+                                                    isOpen="true"
+                                                >
+                                                    <CardBody>
+                                                        <Form inline className="ml-auto">
+                                                            <FormGroup className="no-border">
+                                                                <Input type="text" placeholder="Tìm kiếm"/>
+                                                            </FormGroup>
+                                                            <Button color="primary" className="btn-link btn-icon btn-round">
+                                                                <i className="tim-icons icon-zoom-split"></i>
+                                                            </Button>
+                                                        </Form>
+                                                    </CardBody>
+                                                </Collapse>
+                                            </Card>
                                                 <Card className="card-plains">
                                                     <CardHeader id="headingOne" role="tab">
                                                         <a

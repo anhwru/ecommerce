@@ -119,22 +119,10 @@ class AccountPage extends React.Component {
                                                         href="#pablo"
                                                     >
                                                         <i className="tim-icons icon-lock-circle"/>{" "}
-                                                        Security
+                                                        Đổi mật khẩu
                                                     </NavLink>
                                                 </NavItem>
                                                 <hr className="line-info"/>
-                                                <NavItem>
-                                                    <NavLink
-                                                        className={classnames({
-                                                            active: this.state.profileTabs === 4
-                                                        })}
-                                                        onClick={e => this.toggleTabs(e, "profileTabs", 4)}
-                                                        href="#pablo"
-                                                    >
-                                                        <i className="tim-icons icon-volume-98"/>{" "}
-                                                       Chat
-                                                    </NavLink>
-                                                </NavItem>
                                             </Nav>
                                         </section>
                                         {/* End Profile Sidebar */}

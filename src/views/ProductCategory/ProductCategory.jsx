@@ -8,6 +8,8 @@ import ChooseType from "./ChooseType";
 import Container from "reactstrap/es/Container";
 import Col from "reactstrap/es/Col";
 import Collapses from "./Collapse";
+import Category from "./Category";
+import Row from "reactstrap/es/Row";
 
 // reactstrap components
 
@@ -20,13 +22,15 @@ class ProductCategory extends React.Component {
                 <ColorNavbar/>
                 <div className="row section wrapper" id="product-category">
                     <Container>
-                        <Col md={3}>
-                           <Collapses/>
-                        </Col>
-                        <Col md={9}>
-                        
-                        </Col>
-                        <Paginations/>
+                        <Row>
+                            <Col md={3}>
+                                <Collapses/>
+                            </Col>
+                            <Col md={9}>
+                                <Category/>
+                                <Paginations/>
+                            </Col>
+                        </Row>
                     </Container>
                 </div>
                 <MyFooter/>

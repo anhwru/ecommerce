@@ -18,7 +18,7 @@ class MyCart extends React.Component {
     render() {
         return (
             <>
-                <div className="section">
+                <div className="section" id="my-cart">
                     <Container>
                         <div className="space-70"/>
                         <div id="tables">
@@ -50,13 +50,13 @@ class MyCart extends React.Component {
                                                         <div className="img-container">
                                                             <img
                                                                 alt="..."
-                                                                src="https://salt.tikicdn.com/cache/w390/ts/product/aa/29/c4/a0626c91253c31174a1bfece8fce3427.jpg"
+                                                                src="https://xevathitruong.vn/public_storage/images/2019/04/05/honda-cbr250-2019/honda-cbr250rr-2019-xevathitruong-cover.png"
                                                             />
                                                         </div>
                                                     </td>
                                                     <td className="td-name">
                                                         <Link to="product-detail/:id">
-                                                            Motul 4T 10w40
+                                                            CBR 250RR SP 2021
                                                         </Link>
                                                         <br/>
                                                         <small>by Saint Laurent</small>
@@ -163,7 +163,7 @@ class MyCart extends React.Component {
                                                         <div className="img-container">
                                                             <img
                                                                 alt="..."
-                                                                src="https://vn-live-01.slatic.net/p/579815bf9ba83085abda47062fb09a5c.jpg"
+                                                                src="https://i0.wp.com/warungasep.net/wp-content/uploads/2020/07/fitur-zx25r.png"
                                                             />
                                                         </div>
                                                     </td>
@@ -172,7 +172,7 @@ class MyCart extends React.Component {
                                                             href="#pablo"
                                                             onClick={e => e.preventDefault()}
                                                         >
-                                                            Đèn xi nhan Spirit Beast L17
+                                                            ZX25R
                                                         </a>
                                                         <br/>
                                                         <small>by Prada</small>

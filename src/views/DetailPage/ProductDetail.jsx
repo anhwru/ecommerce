@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // react plugin used to create DropdownMenu for selecting items
 import Select from "react-select";
@@ -21,35 +5,18 @@ import Select from "react-select";
 // reactstrap components
 import {
     Button,
-    Card,
-    CardBody,
-    CardFooter,
-    CardLink,
-    CardTitle,
     Input,
     InputGroup,
     Container,
     Row,
     Col,
-    UncontrolledTooltip,
     Carousel,
     CarouselItem,
     CarouselIndicators
 } from "reactstrap";
 
 // core components
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Rating from '@material-ui/lab/Rating';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
-import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
-import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 import StarRatingReadOnly from "./StarRatingReadOnly";
-import CustomerRating from "./CustomerRating";
 
 
 const items = [
@@ -58,7 +25,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src="https://product.hstatic.net/1000371037/product/img_8745_27556ea9a69940f8b62e0805cb0510d7.jpg"
+                src="https://cdn.24h.com.vn/upload/3-2020/images/2020-08-20/2021-Honda-CBR250RR-SP-chot-gia-122-trieu-dong-dep-phat-me-cb7-1597933140-810-width660height500.jpg"
             />
         ),
         altText: "",
@@ -70,7 +37,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src="https://decalbinhduong.com/kcfinder/upload//images/%C4%91%E1%BB%93%20ch%C6%A1i%20xe/nh%E1%BB%9Bt/Nh%E1%BB%9Bt%20Motul%207100%204T%2010W50%201L13.jpg"
+                src="https://cdns.klimg.com/otosia.com/resized/650x325/p/headline/650x325/0000467348.jpg"
             />
         ),
         altText: "",
@@ -82,7 +49,7 @@ const items = [
             <img
                 alt="..."
                 className="d-block"
-                src="https://cf.shopee.vn/file/0f93a430578c7207383e0e78ac5c735b"
+                src="https://cdn.24h.com.vn/upload/3-2020/images/2020-08-20/2021-Honda-CBR250RR-SP-chot-gia-122-trieu-dong-dep-phat-me-cb9-1597933140-312-width660height500.jpg"
             />
         ),
         altText: "",
@@ -139,7 +106,7 @@ class ProductDetail extends React.Component {
     render() {
         return (
             <>
-                    <div className="section">
+                    <div className="section" id="products-detail">
                         <Container>
                             <Row>
                                 <Col lg="6" md="12">
@@ -209,7 +176,7 @@ class ProductDetail extends React.Component {
                                     </Carousel>
                                 </Col>
                                 <Col className="mx-auto" lg="6" md="12">
-                                    <h2 className="title">Nhớt Motul tổng hợp 4T 7100</h2>
+                                    <h2 className="title">Honda cbr250rr SP {"< QS >"}</h2>
                                     <div className="stats stats-right">
                                         <div className="stars text-warning d-inline-flex">
                                             <StarRatingReadOnly />

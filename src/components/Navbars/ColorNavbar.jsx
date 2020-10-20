@@ -104,7 +104,7 @@ class ColorNavbar extends React.Component {
                                 <Row>
                                     <Col className="collapse-brand" xs="6">
                                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                                            BLK• <span>PRO React</span>
+                                            CBR
                                         </a>
                                     </Col>
                                     <Col className="collapse-close text-right" xs="6">
@@ -115,6 +115,14 @@ class ColorNavbar extends React.Component {
                                 </Row>
                             </div>
                             <Nav className="ml-auto" navbar>
+                                <Form inline className="ml-auto">
+                                    <FormGroup className="no-border">
+                                        <Input type="text" placeholder="Search"/>
+                                        <Button color="primary" className="btn-link btn-icon btn-round">
+                                            <i className="tim-icons icon-zoom-split"></i>
+                                        </Button>
+                                    </FormGroup>
+                                </Form>
                                 <NavItem className="nav-items">
                                     <Link to='/home'>
                                         <NavLink>
@@ -240,14 +248,14 @@ class ColorNavbar extends React.Component {
                                         </Card>
                                     </Modal>
                                 </NavItem>
-                                <NavItem className="nav-items">
-                                    <Link to="/my-account">
-                                        <NavLink>
-                                            <i className="tim-icons icon-badge"/>
-                                            Tài Khoản
-                                        </NavLink>
-                                    </Link>
-                                </NavItem>
+                                {/*<NavItem className="nav-items">*/}
+                                {/*    <Link to="/my-account">*/}
+                                {/*        <NavLink>*/}
+                                {/*            <i className="tim-icons icon-badge"/>*/}
+                                {/*            Tài Khoản*/}
+                                {/*        </NavLink>*/}
+                                {/*    </Link>*/}
+                                {/*</NavItem>*/}
                                 <Modal isOpen={this.state.modalRegister}
                                        toggle={this.toggleModalRegister}>
                                     <Card className="card-register">

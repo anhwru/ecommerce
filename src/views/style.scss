@@ -3,43 +3,52 @@
 //}
 
 //NavBar style
-.nav-items {
-  width: 140px !important;
-  padding: 0 !important;
+#navigation {
+  .nav-items {
+    width: 140px !important;
+    padding: 0 !important;
 
-  &:hover {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .register_login {
     cursor: pointer;
+    color: #ba54f5 !important;
+
+    &:hover {
+      color: #e14eca !important;
+    }
   }
-}
 
-.register_login {
-  cursor: pointer;
-  color: #ba54f5 !important;
-
-  &:hover {
-    color: #e14eca !important;
+  .invoice-logo {
+    height: 70px;
+    width: 65%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
   }
+
+  .invoice-info {
+    margin: 1rem 0 0 !important;
+  }
+
+  .d-inline-flex strong {
+    margin-right: 3px;
+  }
+
+  .date-invoice {
+    margin-top: 25px !important;
+  }
+
 }
 
-.invoice-logo {
-  height: 70px;
-  width: 65%;
-  object-fit: cover;
-  margin: auto;
-  display: block;
+.no-border.form-group, form.ml-auto.form-inline {
+  background: #242c45 !important;
+  border-radius: 3px !important;
 }
 
-.invoice-info {
-  margin: 1rem 0 0 !important;
-}
-
-.d-inline-flex strong {
-  margin-right: 3px;
-}
-
-.date-invoice {
-  margin-top: 25px !important;
-}
 
 input#myNumber {
   border: none;
@@ -121,18 +130,186 @@ input#myNumber {
   }
 
 }
-#product-category{
-  margin-top:60px ;
-}
-#collapse{
+
+#collapse {
   background: #1f2251;
   width: 100% !important;
-  .card-plains{
+
+  .card-plains {
     width: 100% !important;
-      .card-header{
-        a{
-          padding: 10px 0 !important;
+
+    .card-header {
+      a {
+        padding: 10px 0 !important;
+      }
+    }
+  }
+}
+
+#my-cart {
+  img {
+    height: 100px !important;
+    object-fit: cover;
+  }
+}
+
+#products-detail {
+  img {
+    object-fit: cover !important;
+    height: 25rem !important;
+  }
+}
+
+#category {
+  .pd-70 {
+    padding: 70px 0 !important;
+
+    .container {
+      ul {
+        li {
+          a {
+            margin: 0 !important;
+            padding: 5px 5px !important;
+          }
+
         }
+      }
+
+      .tab-space {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+#products {
+  .products-img {
+    overflow: hidden !important;
+    border-radius: 7px;
+    padding: 10px;
+
+    img {
+      cursor: pointer;
+      object-fit: cover;
+      height: 13rem;
+    }
+
+    .add-to-wish {
+      position: absolute;
+      top: 58%;
+      right: 30px;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.7;
+      }
+
+      .add-cart {
+        font-size: 14px;
+        padding: 10px 22px;
+        left: 10px !important;
+        top: 30%;
+        opacity: 1 !important;
+        transition: 0.1s;
+        z-index: 2;
+      }
+
+      .views {
+        font-size: 14px;
+        padding: 10px 22px;
+        right: 10px !important;
+        top: 30%;
+        opacity: 1;
+        transition: 0.1s;
+        z-index: 2;
+      }
+
+      .product-discount {
+        z-index: 0;
+      }
+    }
+
+  }
+
+
+  .add-cart {
+    position: absolute !important;
+    font-size: 14px;
+    padding: 10px 22px;
+    left: -8rem;
+    opacity: 0;
+    top: 30%;
+    z-index: -9999;
+  }
+
+  .views {
+    position: absolute !important;
+    font-size: 14px;
+    padding: 10px 22px;
+    right: -7rem;
+    opacity: 0;
+    top: 30%;
+    z-index: -9999;
+  }
+
+  .product-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.8;
+    font-size: 12px;
+  }
+
+
+  .product-info {
+    margin: 10px 0 0;
+
+    .products-star_rating {
+      line-height: 0 !important;
+
+      .pr-total_rate {
+        position: relative !important;
+        top: -7px !important;
+        font-size: 12px !important;
+        right: -50px !important;
+      }
+
+      fieldset {
+        margin: 0 !important;
+
+
+        span {
+          font-size: 16px !important;
+          margin-bottom: 7px;
+        }
+
+      }
+    }
+
+    .products-name {
+      display: inline-grid;
+
+      .names {
+        color: white;
+        font-weight: 500;
+        width: 120px;
+        overflow: hidden;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .pr-price {
+        font-size: 12px;
+        margin: 0 5px;
+      }
+    }
+
+    .products-progress {
+      .progress {
+        width: 100%;
+      }
     }
   }
 }
