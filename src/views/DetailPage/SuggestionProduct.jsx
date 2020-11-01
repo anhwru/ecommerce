@@ -16,6 +16,7 @@ import {
     UncontrolledTooltip,
 } from "reactstrap";
 import Product from "./Product";
+import Products from "../Products/Products";
 
 // core components
 
@@ -69,7 +70,16 @@ class SuggestionProduct extends React.Component {
                         </Col>
                         <Row>
                             <Col lg="3" md="6">
-                               <Product/>
+                               <Products/>
+                            </Col>
+                            <Col lg="3" md="6">
+                                <Products/>
+                            </Col>
+                            <Col lg="3" md="6">
+                                <Products/>
+                            </Col>
+                            <Col lg="3" md="6">
+                                <Products/>
                             </Col>
                         </Row>
                     </Container>

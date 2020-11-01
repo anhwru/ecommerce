@@ -119,6 +119,21 @@ class Category extends React.Component {
                                         <Col md="4">
                                             <Products/>
                                         </Col>
+                                        <Col md="4">
+                                            <Products/>
+                                        </Col>
+                                        <Col md="4">
+                                            <Products/>
+                                        </Col>
+                                        <Col md="4">
+                                            <Products/>
+                                        </Col>
+                                        <Col md="4">
+                                            <Products/>
+                                        </Col>
+                                        <Col md="4">
+                                            <Products/>
+                                        </Col>
                                     </Row>
                                 </TabPane>
                                 <TabPane tabId="project2">

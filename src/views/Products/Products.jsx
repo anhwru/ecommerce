@@ -102,9 +102,7 @@ class Products extends React.Component {
                                 </div>
                                 <div className="products-name">
                                     <span className="ml-1 names">CBR 250RR Quick Shifter</span>
-                                    <Badge color="primary" className="ml-1">
-                                        157.000.000
-                                    </Badge>
+                                    <p style={{'display':'flex'}}><span className="afterDiscount">157.000.000</span><strike className="beforeDiscount"> 168.000.000 </strike></p>
                                 </div>
                             </CardFooter>
                             <div className="progress-container progress-success">

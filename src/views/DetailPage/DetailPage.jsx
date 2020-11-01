@@ -22,6 +22,14 @@ import DemoFooter from "components/Footers/DemoFooter.jsx";
 import ProductDetail from "./ProductDetail";
 import MyFooter from "../IndexPage/Footer";
 import SuggestionProduct from "./SuggestionProduct";
+import StarRating from "./StarRating";
+import CommentRating from "./CommentRating";
+import CustomerComent from "./CustomerComent";
+import {Container} from "@material-ui/core";
+import Row from "reactstrap/es/Row";
+import {Title} from "@material-ui/icons";
+import Col from "reactstrap/es/Col";
+import RateandComment from "./RateandComment";
 
 
 class DetailPage extends React.Component {
@@ -41,8 +49,19 @@ class DetailPage extends React.Component {
             <>
                 <ColorNavbar/>
                 <div className="wrapper" ref="wrapper">
-                    <div className="main" style={{'margin':'100px 0px'}}>
+                    <div className="main" style={{'margin': '100px 0px'}}>
                         <ProductDetail/>
+                        <Container>
+                            <Row>
+                                <Col md={12}>
+                                    {/*<h3>Bạn phải mua sản phẩm này mới có thể đánh giá!</h3>*/}
+                                    <div className="customer_comment">
+                                        <RateandComment/>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+                        <CommentRating/>
                         <SuggestionProduct/>
                     </div>
                     <MyFooter/>

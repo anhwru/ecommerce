@@ -44,6 +44,10 @@
 
 }
 
+.navbar-translate {
+  width: 200px !important;
+}
+
 .no-border.form-group, form.ml-auto.form-inline {
   background: #242c45 !important;
   border-radius: 3px !important;
@@ -208,7 +212,7 @@ input#myNumber {
       .add-cart {
         font-size: 14px;
         padding: 10px 22px;
-        left: 10px !important;
+        left: 20px !important;
         top: 30%;
         opacity: 1 !important;
         transition: 0.1s;
@@ -218,7 +222,7 @@ input#myNumber {
       .views {
         font-size: 14px;
         padding: 10px 22px;
-        right: 10px !important;
+        right: 20px !important;
         top: 30%;
         opacity: 1;
         transition: 0.1s;
@@ -271,7 +275,7 @@ input#myNumber {
       .pr-total_rate {
         position: relative !important;
         top: -7px !important;
-        font-size: 12px !important;
+        font-size: 11px !important;
         right: -50px !important;
       }
 
@@ -281,7 +285,7 @@ input#myNumber {
 
         span {
           font-size: 16px !important;
-          margin-bottom: 7px;
+          margin: 0 0 5px 0 !important;
         }
 
       }
@@ -298,10 +302,24 @@ input#myNumber {
         font-size: 12px;
         text-overflow: ellipsis;
         white-space: nowrap;
+        margin: 0 !important;
+      }
+
+      .afterDiscount {
+        color: #fd5d93 !important;
+        font-size: 11px !important;
+        margin-right: 5px;
+        font-weight: bold;
+      }
+
+      .beforeDiscount {
+        color: #afafaf !important;
+        font-size: 11px !important;
+        font-weight: 500;
       }
 
       .pr-price {
-        font-size: 12px;
+        font-size: 11px !important;
         margin: 0 5px;
       }
     }
@@ -312,4 +330,25 @@ input#myNumber {
       }
     }
   }
+}
+
+.customer_comment {
+  margin: 0px 52px 0 60px;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 20px 30px;
+
+  span {
+    label {
+      span.MuiRating-icon.MuiRating-iconEmpty {
+        color: #afafaf;
+      }
+    }
+  }
+}
+
+.invoice-logo {
+  height: 82px !important;
+  object-fit: cover !important;
+  width: 100% !important;
 }

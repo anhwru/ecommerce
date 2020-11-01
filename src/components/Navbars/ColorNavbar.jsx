@@ -88,10 +88,10 @@ class ColorNavbar extends React.Component {
                             <NavbarBrand to="/index" tag={Link} id="tooltip6619950104">
                                 <img
                                     src={require("assets/img/cbr-logo.png")}
-                                    style={{'width': '65%', 'object-fit': 'cover', 'height': '30px'}}/>
+                                    style={{'width': '100%', 'object-fit': 'cover', 'height': '28px'}}/>
                             </NavbarBrand>
                             <UncontrolledTooltip delay={0} target="tooltip6619950104">
-                                Shop Dunk
+                                Shop CBR
                             </UncontrolledTooltip>
                             <button className="navbar-toggler" id="navigation">
                                 <span className="navbar-toggler-bar bar1"/>
@@ -115,19 +115,27 @@ class ColorNavbar extends React.Component {
                                 </Row>
                             </div>
                             <Nav className="ml-auto" navbar>
-                                <Form inline className="ml-auto">
-                                    <FormGroup className="no-border">
-                                        <Input type="text" placeholder="Search"/>
-                                        <Button color="primary" className="btn-link btn-icon btn-round">
-                                            <i className="tim-icons icon-zoom-split"></i>
-                                        </Button>
-                                    </FormGroup>
-                                </Form>
+                                {/*<Form inline className="ml-auto">*/}
+                                {/*    <FormGroup className="no-border">*/}
+                                {/*        <Input type="text" placeholder="Search"/>*/}
+                                {/*        <Button color="primary" className="btn-link btn-icon btn-round">*/}
+                                {/*            <i className="tim-icons icon-zoom-split"></i>*/}
+                                {/*        </Button>*/}
+                                {/*    </FormGroup>*/}
+                                {/*</Form>*/}
                                 <NavItem className="nav-items">
                                     <Link to='/home'>
                                         <NavLink>
                                             <i className="tim-icons icon-planet"/>
                                             Trang chủ
+                                        </NavLink>
+                                    </Link>
+                                </NavItem>
+                                <NavItem className="nav-items">
+                                    <Link to="/product-category">
+                                        <NavLink>
+                                            <i className="tim-icons icon-book-bookmark"/>
+                                            Sản phẩm
                                         </NavLink>
                                     </Link>
                                 </NavItem>
