@@ -63,7 +63,7 @@ class SuggestionProduct extends React.Component {
     render() {
         return (
             <>
-                <div className="section related-products">
+                <div className="related-products">
                     <Container>
                         <Col md="8">
                             <h2 className="title">Có thể bạn sẽ cần</h2>

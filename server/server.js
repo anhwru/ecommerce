@@ -3,7 +3,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 var corsOptions = {
-    origin: "http://localhost:8081"
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
 };
 app.use(cors(corsOptions));
 // parse requests of content-type - application/json
@@ -70,3 +73,10 @@ function initial() {
         }
     });
 }
+
+// register and login
+app.post('/api/auth/signin',(req, res, nẽẽt)=>{
+    var userName = req.body.username
+    var passWord = req.body.password
+    console.log(userName,passWord);
+})

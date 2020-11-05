@@ -3,6 +3,8 @@ import "views/style.scss"
 import ColorNavbar from "../../components/Navbars/ColorNavbar";
 import MyFooter from "./Footer";
 import PreFooter from "./PreFooter";
+import Header from "./Header";
+import Partner from "./Partner";
 
 class IndexPage extends React.Component {
     componentDidMount() {
@@ -17,7 +19,8 @@ class IndexPage extends React.Component {
         return (
             <>
               <ColorNavbar/>
-              <PreFooter/>
+              <Header/>
+              <Partner/>
               <MyFooter/>
             </>
         );

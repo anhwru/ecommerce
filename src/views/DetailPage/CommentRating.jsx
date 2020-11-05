@@ -19,7 +19,7 @@ class CommentRating extends React.Component {
     render() {
         return (
             <>
-                <div className="section">
+                <div>
                     <Container>
                             <div id="comments">
                                 <Row>

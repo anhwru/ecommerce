@@ -1,16 +1,69 @@
 //body {
 //  font-family: 'Inter', sans-serif !important;
 //}
+@media screen and (max-width: 991px) {
+  .navbar .navbar-collapse {
+    max-height: calc(100vh - 1.4rem);
+    overflow: hidden !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  ul.ml-auto.btn-icon.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto !important;
+    flex-direction: initial ;
+  }
+}
+
+.btn-icon {
+  li {
+    margin: 0 !important;
+    padding: 0 0 0 23px !important;
+
+    a {
+      padding: 0;
+
+      i {
+        font-size: 24px !important;
+        padding: 0 !important;
+      }
+
+      span.badge-icon {
+        position: absolute;
+        top: -13px;
+        left: 26px;
+        border: 1px solid;
+        margin: 0;
+        padding: 0;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: white;
+        color: #0772db;
+        font-size: 11px;
+        font-weight: bold;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+li.nav-items.account.nav-item {
+  padding: 0 !important;
+}
 
 //NavBar style
 #navigation {
+
   .nav-items {
     width: 140px !important;
     padding: 0 !important;
-
-    &:hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 
   .register_login {
@@ -45,7 +98,7 @@
 }
 
 .navbar-translate {
-  width: 200px !important;
+  width: auto !important;
 }
 
 .no-border.form-group, form.ml-auto.form-inline {
@@ -78,6 +131,9 @@ input#myNumber {
     object-fit: cover;
   }
 }
+.card-login{
+  width: auto !important;
+}
 
 #tab_invoice {
   .section {
@@ -104,9 +160,11 @@ input#myNumber {
     .mx-auto.col-md-8.col-lg-5 {
       margin: 0 !important;
 
-      .card-login.card {
-        width: 680px;
-        margin: 0;
+      .card-login {
+        .card {
+          width: 680px;
+          margin: 0;
+        }
       }
     }
   }
@@ -351,4 +409,8 @@ input#myNumber {
   height: 82px !important;
   object-fit: cover !important;
   width: 100% !important;
+}
+
+.op-06 {
+  background-color: rgba(198, 83, 36, 0.27) !important;
 }

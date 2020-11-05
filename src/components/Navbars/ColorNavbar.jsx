@@ -5,18 +5,12 @@ import classnames from "classnames";
 import {
     Button,
     UncontrolledCollapse,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    NavbarBrand,
     Navbar,
     NavItem,
     Nav,
     Container,
     Row,
     Col,
-    UncontrolledTooltip,
     NavLink,
     Card,
     Form,
@@ -28,6 +22,10 @@ import {
     InputGroupAddon,
     InputGroupText, Input, CardFooter, Modal, FormGroup, Label
 } from "reactstrap";
+import {connect} from "react-redux";
+import {loginWithUsernameAndPassword} from "../../Redux/actions/LoginActions";
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 class ColorNavbar extends React.Component {
     state = {
@@ -38,7 +36,9 @@ class ColorNavbar extends React.Component {
         modalNotice: false,
         modalLogin: false,
         modalRegister: false,
-        openedCollapses: ["collapseOne"]
+        openedCollapses: ["collapseOne"],
+        username: "",
+        password: "",
     };
     toggleModalLogin = () => {
         this.setState({
@@ -52,6 +52,21 @@ class ColorNavbar extends React.Component {
         });
     };
     
+    handleLogin = () => {
+        this.props.loginWithUsernameAndPassword({...this.state}).then(data => {
+            if(this.props.login.success) {
+                this.setState({modalLogin : false})
+            }
+        });
+        // this.setState({modalLogin : false})
+    }
+    
+    handleChange = (event) => {
+        console.log(this.state);
+        this.setState({
+            [event.target.name]: event.target.value,
+        });
+    }
     
     componentDidMount() {
         window.addEventListener("scroll", this.changeNavbarColor);
@@ -80,19 +95,14 @@ class ColorNavbar extends React.Component {
     };
     
     render() {
+        
+        console.log(this.state)
+        console.log(this.props)
         return (
             <>
                 <Navbar className={"fixed-top " + this.state.navbarColor} expand="lg">
                     <Container>
                         <div className="navbar-translate">
-                            <NavbarBrand to="/index" tag={Link} id="tooltip6619950104">
-                                <img
-                                    src={require("assets/img/cbr-logo.png")}
-                                    style={{'width': '100%', 'object-fit': 'cover', 'height': '28px'}}/>
-                            </NavbarBrand>
-                            <UncontrolledTooltip delay={0} target="tooltip6619950104">
-                                Shop CBR
-                            </UncontrolledTooltip>
                             <button className="navbar-toggler" id="navigation">
                                 <span className="navbar-toggler-bar bar1"/>
                                 <span className="navbar-toggler-bar bar2"/>
@@ -114,15 +124,7 @@ class ColorNavbar extends React.Component {
                                     </Col>
                                 </Row>
                             </div>
-                            <Nav className="ml-auto" navbar>
-                                {/*<Form inline className="ml-auto">*/}
-                                {/*    <FormGroup className="no-border">*/}
-                                {/*        <Input type="text" placeholder="Search"/>*/}
-                                {/*        <Button color="primary" className="btn-link btn-icon btn-round">*/}
-                                {/*            <i className="tim-icons icon-zoom-split"></i>*/}
-                                {/*        </Button>*/}
-                                {/*    </FormGroup>*/}
-                                {/*</Form>*/}
+                            <Nav navbar>
                                 <NavItem className="nav-items">
                                     <Link to='/home'>
                                         <NavLink>
@@ -139,27 +141,30 @@ class ColorNavbar extends React.Component {
                                         </NavLink>
                                     </Link>
                                 </NavItem>
-                                {/*<NavItem className="nav-items">*/}
-                                {/*    <Link to="/invoice/:id">*/}
-                                {/*        <NavLink>*/}
-                                {/*            <i className="tim-icons icon-single-02"/>*/}
-                                {/*            Hoá đơn*/}
-                                {/*        </NavLink>*/}
-                                {/*    </Link>*/}
-                                {/*</NavItem>*/}
+                            </Nav>
+                            <Nav className="ml-auto btn-icon" navbar>
                                 <NavItem className="nav-items">
                                     <Link to="/my-cart">
                                         <NavLink>
                                             <i className="tim-icons icon-bag-16"/>
-                                            Giỏ hàng
+                                            <span className="badge-icon">16</span>
+                                        </NavLink>
+                                    </Link>
+                                </NavItem>
+                                <NavItem className="nav-items">
+                                    <Link to="/presentation">
+                                        <NavLink>
+                                            <FavoriteBorderIcon style={{ fontSize: 26 }}/>
+                                            <span className="badge-icon">5</span>
                                         </NavLink>
                                     </Link>
                                 </NavItem>
                                 <NavItem className="nav-items" onClick={this.toggleModalLogin}>
-                                    <NavLink>
-                                        <i className="tim-icons icon-single-02"/>
-                                        Đăng nhập
-                                    </NavLink>
+                                    {!this.props.login.success && (
+                                        <NavLink>
+                                            <FingerprintIcon style={{ fontSize: 28 , cursor:'pointer'}}/>
+                                        </NavLink>
+                                    )}
                                     <Modal
                                         isOpen={this.state.modalLogin}
                                         toggle={this.toggleModalLogin}
@@ -198,6 +203,8 @@ class ColorNavbar extends React.Component {
                                                         <Input
                                                             placeholder="Tài Khoản"
                                                             type="text"
+                                                            name="username"
+                                                            onChange={this.handleChange}
                                                             onFocus={e => this.setState({firstNameFocus: true})}
                                                             onBlur={e => this.setState({firstNameFocus: false})}
                                                         />
@@ -214,6 +221,8 @@ class ColorNavbar extends React.Component {
                                                         </InputGroupAddon>
                                                         <Input
                                                             placeholder="Mật khẩu"
+                                                            name="password"
+                                                            onChange={this.handleChange}
                                                             type="password"
                                                             onFocus={e => this.setState({lastNameFocus: true})}
                                                             onBlur={e => this.setState({lastNameFocus: false})}
@@ -224,12 +233,12 @@ class ColorNavbar extends React.Component {
                                                     <Button
                                                         className="btn-round"
                                                         color="primary"
-                                                        href="#pablo"
-                                                        onClick={e => e.preventDefault()}
+                                                        onClick={this.handleLogin}
                                                         size="lg"
                                                     >
                                                         Đăng nhập
                                                     </Button>
+                    
                                                 </CardFooter>
                                                 <div className="pull-left ml-3 mb-3">
                                                     <h6>
@@ -256,14 +265,15 @@ class ColorNavbar extends React.Component {
                                         </Card>
                                     </Modal>
                                 </NavItem>
-                                {/*<NavItem className="nav-items">*/}
-                                {/*    <Link to="/my-account">*/}
-                                {/*        <NavLink>*/}
-                                {/*            <i className="tim-icons icon-badge"/>*/}
-                                {/*            Tài Khoản*/}
-                                {/*        </NavLink>*/}
-                                {/*    </Link>*/}
-                                {/*</NavItem>*/}
+                                <NavItem className="nav-items account" >
+                                    {this.props.login.success && (
+                                        <Link to="/my-account">
+                                            <NavLink>
+                                                <i className="tim-icons icon-single-02"/>
+                                            </NavLink>
+                                        </Link>
+                                    )}
+                                </NavItem>
                                 <Modal isOpen={this.state.modalRegister}
                                        toggle={this.toggleModalRegister}>
                                     <Card className="card-register">
@@ -391,4 +401,8 @@ class ColorNavbar extends React.Component {
     }
 }
 
-export default ColorNavbar;
+const mapStateToProps = (state) => ({
+    login: state.login,
+});
+
+export default connect(mapStateToProps, {loginWithUsernameAndPassword})(ColorNavbar);
