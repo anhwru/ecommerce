@@ -1,6 +1,19 @@
-//body {
-//  font-family: 'Inter', sans-serif !important;
-//}
+body, footer {
+  background: #282f36 !important;
+}
+
+#root {
+  height: 100vh;
+}
+
+.card {
+  background: #24252d;
+}
+
+.navbar.bg-dark {
+  background: #25252d !important;
+}
+
 @media screen and (max-width: 991px) {
   .navbar .navbar-collapse {
     max-height: calc(100vh - 1.4rem);
@@ -13,7 +26,7 @@
     display: flex;
     justify-content: flex-end;
     margin-left: auto !important;
-    flex-direction: initial ;
+    flex-direction: initial;
   }
 }
 
@@ -131,7 +144,8 @@ input#myNumber {
     object-fit: cover;
   }
 }
-.card-login{
+
+.card-login {
   width: auto !important;
 }
 
@@ -194,11 +208,16 @@ input#myNumber {
 }
 
 #collapse {
-  background: #1f2251;
+  background: #24252d;
   width: 100% !important;
 
   .card-plains {
     width: 100% !important;
+    margin: 0;
+
+    form, input, .no-border {
+      background: #3b3b3b !important;
+    }
 
     .card-header {
       a {
@@ -209,6 +228,18 @@ input#myNumber {
 }
 
 #my-cart {
+  tr {
+
+    .td-name {
+      a {
+        color: #ffc400;
+        font-size: 16px;
+      }
+
+    }
+  }
+
+
   img {
     height: 100px !important;
     object-fit: cover;
@@ -227,6 +258,15 @@ input#myNumber {
     padding: 70px 0 !important;
 
     .container {
+      .nav-item {
+        cursor: pointer;
+
+        a {
+          background: #282f36;
+          color: #ffc400;
+        }
+      }
+
       ul {
         li {
           a {
@@ -264,7 +304,7 @@ input#myNumber {
 
     &:hover {
       img {
-        opacity: 0.7;
+        filter: blur(2px);
       }
 
       .add-cart {
@@ -413,4 +453,37 @@ input#myNumber {
 
 .op-06 {
   background-color: rgba(198, 83, 36, 0.27) !important;
+}
+
+.content_index {
+  position: relative;
+  top: -47rem;
+}
+
+.carousel.slide {
+  height: 30rem;
+
+  img {
+    object-fit: cover;
+    height: 550px;
+    border-radius: 0 !important;
+  }
+}
+
+.no-pd {
+  padding: 0;
+
+  .top-product {
+    height: 275px !important;
+    padding: 20px 10px;
+    background: #282f36;
+    border: 1px solid #ffbb55;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-bottomleft: 0;
+  }
+
+}
+
+.carousel-header {
+  height: 47rem;
 }

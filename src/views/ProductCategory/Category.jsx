@@ -48,7 +48,7 @@ class Category extends React.Component {
             <>
                 <div className="cd-section" id="category">
                     <div className="pd-70">
-                        <Container>
+                        <Container >
                             <Nav
                                 className="nav-pills-info nav-pills-icons nav-pills-lg"
                                 pills
@@ -61,7 +61,6 @@ class Category extends React.Component {
                                             this.toggle("1");
                                         }}
                                     >
-                                        <i className="tim-icons icon-spaceship"/>
                                         CBR 250RR
                                     </NavLink>
                                 </NavItem>
@@ -72,7 +71,6 @@ class Category extends React.Component {
                                             this.toggle("2");
                                         }}
                                     >
-                                        <i className="tim-icons icon-bag-16"/>
                                         ZX25R
                                     </NavLink>
                                 </NavItem>
@@ -83,7 +81,6 @@ class Category extends React.Component {
                                             this.toggle("3");
                                         }}
                                     >
-                                        <i className="tim-icons icon-light-3"/>
                                         Yamaha R3
                                     </NavLink>
                                 </NavItem>
@@ -94,7 +91,6 @@ class Category extends React.Component {
                                             this.toggle("4");
                                         }}
                                     >
-                                        <i className="tim-icons icon-molecule-40"/>
                                         Ninja 400
                                     </NavLink>
                                 </NavItem>
@@ -105,7 +101,6 @@ class Category extends React.Component {
                                             this.toggle("5");
                                         }}
                                     >
-                                        <i className="tim-icons icon-planet"/>
                                         Tất cả
                                     </NavLink>
                                 </NavItem>

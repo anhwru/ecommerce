@@ -26,6 +26,7 @@ import {connect} from "react-redux";
 import {loginWithUsernameAndPassword} from "../../Redux/actions/LoginActions";
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 
 class ColorNavbar extends React.Component {
     state = {
@@ -54,8 +55,8 @@ class ColorNavbar extends React.Component {
     
     handleLogin = () => {
         this.props.loginWithUsernameAndPassword({...this.state}).then(data => {
-            if(this.props.login.success) {
-                this.setState({modalLogin : false})
+            if (this.props.login.success) {
+                this.setState({modalLogin: false})
             }
         });
         // this.setState({modalLogin : false})
@@ -82,7 +83,7 @@ class ColorNavbar extends React.Component {
             document.body.scrollTop > 40
         ) {
             this.setState({
-                navbarColor: "bg-info"
+                navbarColor: "bg-dark"
             });
         } else if (
             document.documentElement.scrollTop < 40 ||
@@ -141,7 +142,23 @@ class ColorNavbar extends React.Component {
                                         </NavLink>
                                     </Link>
                                 </NavItem>
+                                <NavItem className="nav-items">
+                                    <Link to="/contact">
+                                        <NavLink>
+                                            <i className="tim-icons icon-send"/>
+                                            Liên hệ
+                                        </NavLink>
+                                    </Link>
+                                </NavItem>
                             </Nav>
+                            {/*<Form inline className="ml-auto">*/}
+                            {/*    <FormGroup className="no-border">*/}
+                            {/*        <Input type="text" placeholder="Tìm kiếm"/>*/}
+                            {/*    </FormGroup>*/}
+                            {/*    <Button color="primary" className="btn-link btn-icon btn-round">*/}
+                            {/*        <i className="tim-icons icon-zoom-split"></i>*/}
+                            {/*    </Button>*/}
+                            {/*</Form>*/}
                             <Nav className="ml-auto btn-icon" navbar>
                                 <NavItem className="nav-items">
                                     <Link to="/my-cart">
@@ -154,7 +171,7 @@ class ColorNavbar extends React.Component {
                                 <NavItem className="nav-items">
                                     <Link to="/presentation">
                                         <NavLink>
-                                            <FavoriteBorderIcon style={{ fontSize: 26 }}/>
+                                            <FavoriteBorderIcon style={{fontSize: 26}}/>
                                             <span className="badge-icon">5</span>
                                         </NavLink>
                                     </Link>
@@ -162,7 +179,7 @@ class ColorNavbar extends React.Component {
                                 <NavItem className="nav-items" onClick={this.toggleModalLogin}>
                                     {!this.props.login.success && (
                                         <NavLink>
-                                            <FingerprintIcon style={{ fontSize: 28 , cursor:'pointer'}}/>
+                                            <FingerprintIcon style={{fontSize: 28, cursor: 'pointer'}}/>
                                         </NavLink>
                                     )}
                                     <Modal
@@ -190,44 +207,56 @@ class ColorNavbar extends React.Component {
                                                     </button>
                                                 </CardHeader>
                                                 <CardBody>
-                                                    <InputGroup
-                                                        className={classnames("input-lg", {
-                                                            "input-group-focus": this.state.firstNameFocus
-                                                        })}
-                                                    >
-                                                        <InputGroupAddon addonType="prepend">
-                                                            <InputGroupText>
-                                                                <i className="tim-icons icon-single-02"/>
-                                                            </InputGroupText>
-                                                        </InputGroupAddon>
-                                                        <Input
-                                                            placeholder="Tài Khoản"
-                                                            type="text"
-                                                            name="username"
-                                                            onChange={this.handleChange}
-                                                            onFocus={e => this.setState({firstNameFocus: true})}
-                                                            onBlur={e => this.setState({firstNameFocus: false})}
-                                                        />
-                                                    </InputGroup>
-                                                    <InputGroup
-                                                        className={classnames("input-lg", {
-                                                            "input-group-focus": this.state.lastNameFocus
-                                                        })}
-                                                    >
-                                                        <InputGroupAddon addonType="prepend">
-                                                            <InputGroupText>
-                                                                <i className="tim-icons icon-key-25"/>
-                                                            </InputGroupText>
-                                                        </InputGroupAddon>
-                                                        <Input
-                                                            placeholder="Mật khẩu"
-                                                            name="password"
-                                                            onChange={this.handleChange}
-                                                            type="password"
-                                                            onFocus={e => this.setState({lastNameFocus: true})}
-                                                            onBlur={e => this.setState({lastNameFocus: false})}
-                                                        />
-                                                    </InputGroup>
+                                                    <form>
+                                                        <InputGroup
+                                                            className={classnames("input-lg", {
+                                                                "input-group-focus": this.state.firstNameFocus
+                                                            })}
+                                                        >
+                                                            <InputGroupAddon addonType="prepend">
+                                                                <InputGroupText>
+                                                                    <i className="tim-icons icon-single-02"/>
+                                                                </InputGroupText>
+                                                            </InputGroupAddon>
+                                                            <Input
+                                                                placeholder="Tài Khoản"
+                                                                type="text"
+                                                                name="username"
+                                                                autocomplete="off"
+                                                                onChange={this.handleChange}
+                                                                onFocus={e => this.setState({firstNameFocus: true})}
+                                                                onBlur={e => this.setState({firstNameFocus: false})}
+                                                            />
+                                                        </InputGroup>
+                                                        <InputGroup
+                                                            className={classnames("input-lg", {
+                                                                "input-group-focus": this.state.lastNameFocus
+                                                            })}
+                                                        >
+                                                            <InputGroupAddon addonType="prepend">
+                                                                <InputGroupText>
+                                                                    <i className="tim-icons icon-key-25"/>
+                                                                </InputGroupText>
+                                                            </InputGroupAddon>
+                                                            <Input
+                                                                placeholder="Mật khẩu"
+                                                                name="password"
+                                                                onChange={this.handleChange}
+                                                                type="password"
+                                                                autocomplete="off"
+                                                                onFocus={e => this.setState({lastNameFocus: true})}
+                                                                onBlur={e => this.setState({lastNameFocus: false})}
+                                                            />
+                                                        </InputGroup>
+                                                        <FormGroup check className="text-center">
+                                                            <Label check>
+                                                                <Input type="checkbox"/>{' '}
+                                                                Lưu tài khoản
+                                                                <span className="form-check-sign">
+                                                            </span>
+                                                            </Label>
+                                                        </FormGroup>
+                                                    </form>
                                                 </CardBody>
                                                 <CardFooter className="text-center">
                                                     <Button
@@ -238,7 +267,6 @@ class ColorNavbar extends React.Component {
                                                     >
                                                         Đăng nhập
                                                     </Button>
-                    
                                                 </CardFooter>
                                                 <div className="pull-left ml-3 mb-3">
                                                     <h6>
@@ -265,7 +293,7 @@ class ColorNavbar extends React.Component {
                                         </Card>
                                     </Modal>
                                 </NavItem>
-                                <NavItem className="nav-items account" >
+                                <NavItem className="nav-items account">
                                     {this.props.login.success && (
                                         <Link to="/my-account">
                                             <NavLink>

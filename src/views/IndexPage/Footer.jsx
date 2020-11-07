@@ -35,7 +35,7 @@ class MyFooter extends React.Component {
     render() {
         return (
             <>
-                <div className="section section-footers" data-background-color="gray">
+                <div className="section-footers" data-background-color="gray">
                     <div id="footer-areas">
                         {/* ********* BIG WHITE FOOTER V2 ********* */}
                         <footer className="footer footer-white footer-big">
