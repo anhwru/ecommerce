@@ -41,7 +41,7 @@ class ResetPassWord extends React.Component {
                 {/*<ColorNavbar />*/}
                 <div className="wrapper" ref="wrapper">
                         <Container>
-                            <Col className="mx-auto" lg="5" md="8">
+                            <Col className="mx-auto" lg="12" md="12">
                                 <Card className="card-login">
                                     <Form action="" className="form" method="">
                                         <CardHeader>
