@@ -60,6 +60,10 @@ import ProductCategory from "./views/ProductCategory/ProductCategory";
 import {Provider} from "react-redux";
 import {Store} from "./Redux/stores";
 import history from "./history.js";
+import EmptyCart from "./views/CartPage/EmptyCart";
+import EmptyWishList from "./views/WishList/EmptyWishList";
+import EmptyWishListPage from "./views/WishList/EmptyWishListPage";
+import WishListPage from "./views/WishList/WishListPage";
 
 ReactDOM.render(
     <Provider store={Store}>
@@ -121,6 +125,9 @@ ReactDOM.render(
                 <Route path="/500" render={props => <Error500 {...props} />}/>
                 <Route path="/my-account" render={props => <AccountPage {...props} />}/>
                 <Route path="/product-category" render={props => <ProductCategory {...props} />}/>
+                <Route path="/empty-cart" render={props => <EmptyCart {...props} />}/>
+                <Route path="/empty-wishlist" render={props => <EmptyWishListPage {...props} />}/>
+                <Route path="/wishlist" render={props => <WishListPage {...props} />}/>
                 <Redirect from="/" to="/home"/>
                 
                 <Redirect from='/*' to='/404'/>

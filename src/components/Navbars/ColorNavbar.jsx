@@ -169,7 +169,7 @@ class ColorNavbar extends React.Component {
                                     </Link>
                                 </NavItem>
                                 <NavItem className="nav-items">
-                                    <Link to="/presentation">
+                                    <Link to="/wishlist">
                                         <NavLink>
                                             <FavoriteBorderIcon style={{fontSize: 26}}/>
                                             <span className="badge-icon">5</span>

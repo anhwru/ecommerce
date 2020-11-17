@@ -41,7 +41,7 @@ class MyCart extends React.Component {
                                                     <th>Loại/Size</th>
                                                     <th className="text-right">Giá</th>
                                                     <th className="text-right">Số lượng</th>
-                                                    <th className="text-right">Thành tiền</th>
+                                                    <th className="text-center">Thành tiền</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -78,7 +78,7 @@ class MyCart extends React.Component {
                                                             </Button>
                                                         </ButtonGroup>
                                                     </td>
-                                                    <td className="td-number">
+                                                    <td className="td-number text-center">
                                                         <small>€</small>
                                                         549
                                                     </td>
@@ -136,7 +136,7 @@ class MyCart extends React.Component {
                                                             </Button>
                                                         </ButtonGroup>
                                                     </td>
-                                                    <td className="td-number">
+                                                    <td className="td-number text-center">
                                                         <small>€</small>
                                                         998
                                                     </td>
@@ -194,7 +194,7 @@ class MyCart extends React.Component {
                                                             </Button>
                                                         </ButtonGroup>
                                                     </td>
-                                                    <td className="td-number">
+                                                    <td className="td-number text-center">
                                                         <small>€</small>
                                                         799
                                                     </td>

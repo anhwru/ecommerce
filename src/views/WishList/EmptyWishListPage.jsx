@@ -1,22 +1,20 @@
 import React from "react";
-
-// core components
-import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
-import DemoFooter from "components/Footers/DemoFooter.jsx";
-
-import MyCart from "./MyCart";
+import ColorNavbar from "../../components/Navbars/ColorNavbar";
+import EmptyWishList from "./EmptyWishList";
+import Footers from "../IndexSections/Footers";
 import MyFooter from "../IndexPage/Footer";
+import MyWishList from "./MyWishList";
 
-class CartPage extends React.Component {
+class EmptyWishListPage extends React.Component {
     componentDidMount() {
-        document.body.classList.add("index-page");
+        document.body.classList.add("presentation-page");
         document.documentElement.scrollTop = 0;
         document.scrollingElement.scrollTop = 0;
         this.refs.wrapper.scrollTop = 0;
     }
     
     componentWillUnmount() {
-        document.body.classList.remove("index-page");
+        document.body.classList.remove("presentation-page");
     }
     
     render() {
@@ -24,13 +22,12 @@ class CartPage extends React.Component {
             <>
                 <ColorNavbar/>
                 <div className="wrapper" ref="wrapper">
-                    <div className="main">
-                        <MyCart/>
-                    </div>
+                    <EmptyWishList/>
                 </div>
+                <MyFooter/>
             </>
         );
     }
 }
 
-export default CartPage;
+export default EmptyWishListPage;
