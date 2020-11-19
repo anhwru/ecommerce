@@ -54,7 +54,7 @@ class Carousel extends React.Component {
             <>
                 <UncontrolledCarousel
                     items={carouselItems}
-                    indicators={false}
+                    indicators={true}
                 />
             </>
         );

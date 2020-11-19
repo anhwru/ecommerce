@@ -41,11 +41,11 @@ const NextButton = props => {
 let slickSettings = {
     prevArrow: <PrevButton />,
     nextArrow: <NextButton />,
-    className: "slider col-md-8 ml-auto mr-auto",
+    className: "slider col-md-9 ml-auto mr-auto",
     dots: false,
     infinite: true,
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
         {

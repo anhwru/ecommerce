@@ -64,6 +64,7 @@ import EmptyCart from "./views/CartPage/EmptyCart";
 import EmptyWishList from "./views/WishList/EmptyWishList";
 import EmptyWishListPage from "./views/WishList/EmptyWishListPage";
 import WishListPage from "./views/WishList/WishListPage";
+import Contact from "./views/Contact/ContactPage";
 
 ReactDOM.render(
     <Provider store={Store}>
@@ -124,6 +125,7 @@ ReactDOM.render(
                 <Route path="/404" render={props => <Error404 {...props} />}/>
                 <Route path="/500" render={props => <Error500 {...props} />}/>
                 <Route path="/my-account" render={props => <AccountPage {...props} />}/>
+                <Route path="/contact" render={props => <Contact {...props} />}/>
                 <Route path="/product-category" render={props => <ProductCategory {...props} />}/>
                 <Route path="/empty-cart" render={props => <EmptyCart {...props} />}/>
                 <Route path="/empty-wishlist" render={props => <EmptyWishListPage {...props} />}/>

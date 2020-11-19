@@ -1,5 +1,5 @@
 body, footer {
-  background: #282f36 !important;
+  //background: #282f36 !important;
 }
 
 #root {
@@ -9,14 +9,18 @@ body, footer {
 
 .my-section {
   padding-top: 50px;
+
+  .mgt-0 {
+    margin-top: 0;
+  }
 }
 
 .card {
-  background: #24252d;
+  //background: #24252d;
 }
 
 .navbar.bg-dark {
-  background: #25252d !important;
+  //background: #25252d !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -500,6 +504,7 @@ input#myNumber {
       height: 15rem !important;
       -moz-border-radius-topleft: 0;
       -moz-border-radius-bottomleft: 0;
+      border-left: 1px solid #ffbb55;
 
       &:nth-child(1) {
         border-bottom: 1px solid #ffbb55;
@@ -513,10 +518,9 @@ input#myNumber {
       }
 
       .top-product-title {
-        margin: 5px 0 0 0;
         font-size: 15px;
         font-weight: bold;
-        padding: 10px 0 0 0;
+        padding: 15px 0 0 0;
       }
 
       .more_detail {
@@ -532,8 +536,9 @@ input#myNumber {
 
 // slick product
 #slick_product {
-  .slick-slide.slick-active {
-    width: 280px !important;
+  .card {
+    max-height: 338px !important;
+    min-width: 260px !important;
   }
 
   .slick-list {
@@ -584,13 +589,13 @@ input#myNumber {
 .list_line {
   color: yellow !important;
   width: 100%;
-  font-size: 17px;
+  font-size: 12px;
   overflow: hidden;
   font-weight: 500 !important;
   cursor: pointer;
   text-overflow: ellipsis;
   white-space: nowrap;
-  text-align: center;
+  text-align: left;
 }
 
 .list-line_price {
@@ -665,6 +670,15 @@ input#myNumber {
     min-height: 25rem !important;
     max-height: 25rem !important;
   }
+
+  .col-lg-4 {
+    .cd-line {
+      .card {
+        margin-top: 7px !important;
+      }
+    }
+  }
+
 }
 
 .c1 {
@@ -693,15 +707,85 @@ input#myNumber {
 }
 
 .pr_with_description {
-  margin: 0 !important;
 
   .cd {
     margin: 0 !important;
     max-height: 15rem;
     min-height: 15rem;
   }
+
+  .card-body {
+    margin: 0 !important;
+    .card-title {
+      font-size: 13px !important;
+      font-weight: 600;
+    }
+  }
 }
 
 .blog-post .slick-slide img {
   margin-bottom: 0 !important;
+}
+
+.slick-partner {
+  .slick-list {
+    margin: 0 !important;
+    padding: 30px 0 !important;
+  }
+}
+
+#testimonials {
+  .testimonials-4 {
+    padding-top: 0 !important;
+
+    .positioned {
+      margin-top: 40px !important;
+    }
+
+    .slick-list {
+      margin-top: 0 !important;
+
+      .slick-slide {
+        margin-top: 0 !important;
+
+        .info {
+          min-height: 25rem;
+        }
+
+      }
+    }
+  }
+}
+
+#top-category {
+  .card-3 {
+    height: 100%;
+    margin: 0 !important;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .title-pr {
+      margin: 5px 0;
+      max-width: 135px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .card-blog {
+    min-height: 330px;
+    height: 330px;
+
+    .card-body {
+      min-height: 350px !important;
+    }
+  }
+}
+
+.card .card-footer .stats i {
+  margin-right: 0 !important;
 }

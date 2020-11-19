@@ -59,26 +59,15 @@ let slickHeader2Settings = {
 
 class Partner extends React.Component {
     state = {};
+    
     render() {
         return (
             <>
                 <div className="cd-section" id="headers">
-                    <div className="header header-2">
-                        <div className="page-header header-filter">
-                            <div
-                                className="page-header-image"
-                                style={{
-                                    backgroundImage:
-                                        "url(" + require("assets/img/matt-palmer.jpg") + ")"
-                                }}
-                            />
-                            <Container>
-                                <Row className="text-left">
-                                    <Col md="12" xs="12">
-                                        <PreFooter/>
-                                    </Col>
-                                </Row>
-                                <Row>
+                    <div className="header header-2 slick-partner">
+                        <Container>
+                            <Row>
+                                <Col md={12}>
                                     <Slick {...slickHeader2Settings}>
                                         <div className="slide">
                                             <img
@@ -129,11 +118,12 @@ class Partner extends React.Component {
                                             />
                                         </div>
                                     </Slick>
-                                </Row>
-                            </Container>
-                        </div>
+                                </Col>
+                            </Row>
+                        </Container>
                     </div>
-                </div>{" "}
+                </div>
+                {" "}
             </>
         );
     }

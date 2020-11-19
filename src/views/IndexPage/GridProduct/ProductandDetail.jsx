@@ -16,10 +16,10 @@ class ProductandDetail extends React.Component {
                     <Card className="card-blog c1">
                         <div className="card-image">
                             <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <img style={{objectFit: "cover"}}
+                                <img style={{objectFit: "none"}}
                                     alt="..."
                                     className="img rounded"
-                                    src="https://lamdepwiki.com/wp-content/uploads/2019/09/mau-vay-dep-danh-cho-nguoi-gay-1.jpg"
+                                    src="https://i.pinimg.com/originals/02/64/a9/0264a96a8ce2c16873a9834ef219305b.jpg"
                                 />
                             </a>
                         </div>
@@ -37,12 +37,12 @@ class ProductandDetail extends React.Component {
                                 Inside...
                             </p>
                             <CardFooter>
-                                <Button
+                                <Button className="btn-round"
                                     color="primary"
                                     href="#pablo"
                                     onClick={e => e.preventDefault()}
                                 >
-                                    Read Article
+                                    Xem chi tiết
                                 </Button>
                             </CardFooter>
                         </CardBody>

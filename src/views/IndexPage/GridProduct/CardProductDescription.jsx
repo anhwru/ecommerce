@@ -25,9 +25,7 @@ class CardProductDescription extends React.Component {
                 <Card className="card-profile profile-bg pr_with_description">
                     <CardHeader className="cd"
                         style={{
-                            backgroundImage:`url("https://product.hstatic.net/1000078312/product/biker-jacket-bk01_master.jpg")`
-                            
-                                
+                            backgroundImage:`url("https://menback.com/wp-content/uploads/2019/08/c%C3%A1c-ki%E1%BB%83u-%C3%A1o-thun-nam-kinh-%C4%91i%E1%BB%83n-ph%E1%BA%A3i-c%C3%B3-trong-t%E1%BB%A7-%C4%91%E1%BB%93-c%E1%BB%A7a-%C4%91%C3%A0n-%C3%B4ng.jpg")`
                         }}
                     >
                     </CardHeader>
@@ -48,34 +46,13 @@ class CardProductDescription extends React.Component {
                                 onClick={e => e.preventDefault()}
                                 size="sm"
                             >
-                                <i className="tim-icons icon-check-2 mr-1"/>
-                                Following
+                                <i className="tim-icons icon-cart mr-1"/>
+                                Mua ngay
                             </Button>
                         </div>
                         <div className="d-inline float-right">
-                            <Button
-                                className="btn-icon btn-round"
-                                color="dribbble"
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                            >
-                                <i className="fab fa-dribbble"/>
-                            </Button>
-                            <Button
-                                className="btn-icon btn-round ml-1"
-                                color="linkedin"
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                            >
-                                <i className="fab fa-linkedin"/>
-                            </Button>
-                            <Button
-                                className="btn-icon btn-round ml-1"
-                                color="behance"
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                            >
-                                <i className="fab fa-behance"/>
+                            <Button className="btn-round" color="primary" size="sm">
+                                <i className="tim-icons icon-heart-2" /> Thêm vào yêu thích
                             </Button>
                         </div>
                     </CardFooter>

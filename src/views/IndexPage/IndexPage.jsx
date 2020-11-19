@@ -10,6 +10,7 @@ import ProductSlider from "./ProductSlider/ProductSlider";
 import TopCategory from "./TopCategory/TopCategory";
 import GridProduct from "./GridProduct";
 import Suggestion from "./Suggestion";
+import OneSlideSlick from "./OneSlideSlick";
 
 class IndexPage extends React.Component {
     componentDidMount() {
@@ -27,9 +28,11 @@ class IndexPage extends React.Component {
             <>
                 <ColorNavbar/>
                 <TopSale/>
+                <TopCategory/>
                 <GridProduct/>
                 <ProductSlider/>
-                <TopCategory/>
+                <OneSlideSlick/>
+                {/*<TopCategory/>*/}
                 <Suggestion/>
                 <Partner/>
                 <MyFooter/>
