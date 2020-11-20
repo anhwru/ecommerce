@@ -32,6 +32,7 @@ import {
 import StarRatingReadOnly from "../DetailPage/StarRatingReadOnly";
 import { connect } from "react-redux";
 import { addProductToCart } from "../../Redux/actions/CartAction";
+import { addProductToWishProduct } from "../../Redux/actions/WishProductAction";
 // import Products from "../Products/Products";
 
 class Products extends React.Component {
@@ -49,7 +50,7 @@ class Products extends React.Component {
     }
   };
 
-  handleClick = (username, idProduct) => {
+  handleAddProductToCart = (username, idProduct) => {
     this.props
       .addProductToCart(username, idProduct)
       .then(() => {
@@ -92,6 +93,49 @@ class Products extends React.Component {
       });
   };
 
+  handleAddProductToWishProduct = (username, idProduct) => {
+    this.props
+      .addProductToWishProduct(username, idProduct)
+      .then(() => {
+        this.setState({
+          alert: (
+            <UncontrolledAlert
+              className="alert-with-icon my-alert"
+              color="success"
+            >
+              <span data-notify="icon" className="tim-icons icon-bell-55" />
+              <span>
+                <b>Well done! - </b>
+                Sản phẩm đã được thêm vào danh sách yêu thích
+              </span>
+            </UncontrolledAlert>
+          ),
+        });
+        setTimeout(() => {
+          this.setState({ alert: null });
+        }, 3000);
+      })
+      .catch(() => {
+        this.setState({
+          alert: (
+            <UncontrolledAlert
+              className="alert-with-icon my-alert"
+              color="danger"
+            >
+              <span data-notify="icon" className="tim-icons icon-support-17" />
+              <span>
+                <b>Error! - </b>
+                Sản phẩm không được thêm vào danh sách yêu thích
+              </span>
+            </UncontrolledAlert>
+          ),
+        });
+        setTimeout(() => {
+          this.setState({ alert: null });
+        }, 3000);
+      });
+  };
+
   render() {
     let { user } = this.props;
     let { idProduct, alert } = this.state;
@@ -111,6 +155,9 @@ class Products extends React.Component {
                   color="primary"
                   type="button"
                   id="tooltip104653228"
+                  onClick={() =>
+                    this.handleAddProductToWishProduct(user.username, idProduct)
+                  }
                 >
                   <i className="tim-icons icon-heart-2" />
                 </Button>
@@ -126,7 +173,9 @@ class Products extends React.Component {
                 className="btn-round ml-1 add-cart"
                 color="warning"
                 type="button"
-                onClick={() => this.handleClick(user.username, idProduct)}
+                onClick={() =>
+                  this.handleAddProductToCart(user.username, idProduct)
+                }
               >
                 Mua <i className="tim-icons icon-basket-simple" />
               </Button>
@@ -179,4 +228,7 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps, { addProductToCart })(Products);
+export default connect(mapStateToProps, {
+  addProductToCart,
+  addProductToWishProduct,
+})(Products);

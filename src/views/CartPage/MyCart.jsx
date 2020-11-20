@@ -246,7 +246,7 @@ class MyCart extends React.Component {
                                     placement="left"
                                     target="tooltip653500052"
                                   >
-                                    Remove item
+                                    Xóa khỏi giỏ hàng
                                   </UncontrolledTooltip>
                                 </td>
                               </tr>

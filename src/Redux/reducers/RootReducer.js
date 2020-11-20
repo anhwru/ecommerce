@@ -2,13 +2,13 @@ import { combineReducers } from "redux";
 import LoginReducer from "./LoginReducer";
 import UserReducer from "./UserReducer";
 import CartReducer from "./CartReducer";
-import FavoriteProductReducer from "./FavoriteProductReducer";
+import WishProductReducer from "./WishProductReducer";
 
 const RootReducer = combineReducers({
   login: LoginReducer,
   user: UserReducer,
   cart: CartReducer,
-  favoriteProduct: FavoriteProductReducer,
+  wishProduct: WishProductReducer,
 });
 
 export default RootReducer;
