@@ -471,66 +471,72 @@ input#myNumber {
 }
 
 #topsale {
-  .col-md-8 {
-    padding-right: 0 !important;
+  .row {
+    .card {
+      background: transparent;
 
-    .carousel.slide {
-      height: 30rem !important;
+      .col-md-8 {
 
-      .carousel-inner {
-        height: 30rem !important;
-
-        .carousel-item {
+        .carousel.slide {
           height: 30rem !important;
 
-          .w-100 {
-            width: auto !important;
+          .carousel-inner {
+            height: 30rem !important;
+            border-radius: 7px !important;
+
+            .carousel-item {
+              height: 30rem !important;
+
+              .w-100 {
+                width: auto !important;
+              }
+
+              img {
+                max-width: initial !important;
+              }
+            }
+
           }
 
-          img {
-            max-width: initial !important;
+        }
+      }
+
+      .col-md-4 {
+
+        .top-product {
+          background: rgba(34, 34, 81, 0.94);
+          height: 15rem !important;
+          border-radius: 5px;
+
+          //&:nth-child(1) {
+          //  border-bottom: 1px solid #ffbb55;
+          //}
+
+          .top-product_img {
+            display: block;
+            margin: auto;
+            max-width: 45%;
+            padding: 10px;
+          }
+
+          .top-product-title {
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px 0 0 0;
+          }
+
+          .more_detail {
+            display: block;
+            margin: auto;
+            text-align: center;
+            font-size: 14px;
           }
         }
-
-      }
-
-    }
-  }
-
-  .col-md-4 {
-    padding-left: 0 !important;
-
-    .top-product {
-      height: 15rem !important;
-      -moz-border-radius-topleft: 0;
-      -moz-border-radius-bottomleft: 0;
-      border-left: 1px solid #ffbb55;
-
-      &:nth-child(1) {
-        border-bottom: 1px solid #ffbb55;
-      }
-
-      .top-product_img {
-        display: block;
-        margin: auto;
-        max-width: 45%;
-        padding: 10px;
-      }
-
-      .top-product-title {
-        font-size: 15px;
-        font-weight: bold;
-        padding: 15px 0 0 0;
-      }
-
-      .more_detail {
-        display: block;
-        margin: auto;
-        text-align: center;
-        font-size: 14px;
       }
     }
+
   }
+
 
 }
 
@@ -716,6 +722,7 @@ input#myNumber {
 
   .card-body {
     margin: 0 !important;
+
     .card-title {
       font-size: 13px !important;
       font-weight: 600;
@@ -788,4 +795,8 @@ input#myNumber {
 
 .card .card-footer .stats i {
   margin-right: 0 !important;
+}
+
+.t-center {
+  text-align: center;
 }
