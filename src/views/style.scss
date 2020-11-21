@@ -81,7 +81,6 @@ li.nav-items.account.nav-item {
 
 //NavBar style
 #navigation {
-
   .nav-items {
     width: 140px !important;
     padding: 0 !important;
@@ -116,18 +115,17 @@ li.nav-items.account.nav-item {
   .date-invoice {
     margin-top: 25px !important;
   }
-
 }
 
 .navbar-translate {
   width: auto !important;
 }
 
-.no-border.form-group, form.ml-auto.form-inline {
+.no-border.form-group,
+form.ml-auto.form-inline {
   background: #242c45 !important;
   border-radius: 3px !important;
 }
-
 
 input#myNumber {
   border: none;
@@ -169,7 +167,6 @@ input#myNumber {
       }
     }
   }
-
 }
 
 #tab-change_pass {
@@ -209,7 +206,6 @@ input#myNumber {
     display: flex !important;
     margin: auto !important;
   }
-
 }
 
 #collapse {
@@ -220,7 +216,9 @@ input#myNumber {
     width: 100% !important;
     margin: 0;
 
-    form, input, .no-border {
+    form,
+    input,
+    .no-border {
       background: #3b3b3b !important;
     }
 
@@ -234,16 +232,13 @@ input#myNumber {
 
 #my-cart {
   tr {
-
     .td-name {
       a {
         color: #ffc400;
         font-size: 16px;
       }
-
     }
   }
-
 
   img {
     height: 100px !important;
@@ -278,7 +273,6 @@ input#myNumber {
             margin: 0 !important;
             padding: 5px 5px !important;
           }
-
         }
       }
 
@@ -336,9 +330,7 @@ input#myNumber {
         z-index: 0;
       }
     }
-
   }
-
 
   .add-cart {
     position: absolute !important;
@@ -368,7 +360,6 @@ input#myNumber {
     font-size: 12px;
   }
 
-
   .product-info {
     margin: 10px 0 0;
 
@@ -385,12 +376,10 @@ input#myNumber {
       fieldset {
         margin: 0 !important;
 
-
         span {
           font-size: 16px !important;
           margin: 0 0 5px 0 !important;
         }
-
       }
     }
 
@@ -465,7 +454,6 @@ input#myNumber {
   top: -47rem;
 }
 
-
 .no-pd {
   padding: 0;
 }
@@ -536,7 +524,6 @@ input#myNumber {
     }
 
   }
-
 
 }
 
@@ -654,7 +641,6 @@ input#myNumber {
     right: 5%;
     border-radius: 0 !important;
   }
-
 }
 
 .big-btn {
@@ -799,4 +785,19 @@ input#myNumber {
 
 .t-center {
   text-align: center;
+}
+
+.my-alert {
+  position: fixed;
+  width: 350px;
+  top: 0;
+  right: 0;
+  animation-name: transition-alert;
+  animation-duration: 0.5s;
+  z-index: 999999999;
+}
+
+@keyframes transition-alert {
+  from {right: -200px; top: 0; opacity: 0.6}
+  to {right: 0; top: 0; opacity: 1}
 }

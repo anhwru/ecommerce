@@ -1,5 +1,5 @@
 import React from "react";
-import "views/style.scss"
+import "views/style.scss";
 import ColorNavbar from "../../components/Navbars/ColorNavbar";
 import MyFooter from "./Footer";
 import PreFooter from "./PreFooter";
